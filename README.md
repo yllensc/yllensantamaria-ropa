@@ -1,39 +1,36 @@
-# Veterinary
-
-Backend de una veterinaria para gestión administrativa con CSharp a través de estructura de 4 capas y code-first migration
+# ClothingStore
 
 ## Comenzando 🚀
 
-El proyecto de desarrollo de software tiene como objetivo principal la creación de un sistema de administración para una veterinaria. Este sistema permitirá a los administradores y al personal de la veterinaria gestionar de manera eficiente y efectiva todas las actividades relacionadas con la atención de mascotas y la gestión de clientes.
-## Requerimientos funcionales
-1. Autenticación y autorización:
-    - El sistema debe implementar protección en los endpoints utilizando JWT (JSON Web Tokens). El token tiene una duracion de 1 minuto.
-    - Se debe implementar refresh token.
-    - Debe restringir las peticiones a los endpoints según los roles de los usuarios.
-2. Se debe permitir realizar procesos de creacion, edicion, eliminacion y listado de informacion de cada una de las tablas
-3. El backend debe permitir restringir peticiones consecutivos usando tecnicas de limitacion por IP.
-4. El backend debe permitir realizar la paginacion en  las peticiones get de todos los controladores.
-5. Los controladores deben implementar 2 versiones diferentes (Query y Header)
+La empresa safe clothing desea realizar un backend que le permita llevar el control, registro y seguimiento de la producción de prendas de seguridad industrial, la empresa cuenta con diferentes tipos de prendas entre las cuales están las prendas resistentes al fuego (Ignifugas), resistentes a altos voltajes (Arco eléctrico). La empresa lo contrata a usted como experto backend para que cumpla con los siguientes requerimientos de desarrollo.
+
+- Implementar restricción de peticiones haciendo uso de limitaciones de peticiones por IP.
+- Implementar protección a los endPoints haciendo uso de JWT y roles de usuario.
+- Implementar esquema de versionado de Api que facilite el proceso de implementación de nuevos endpoints sin afectar el funcionamiento de las aplicaciones externas que consumen los servicios del Api.
+- Implementar endpoints que permitan realizar el proceso de CRUD en cada uno de los controladores del backend.
+- Debido al gran volumen de información que la empresa procesa diariamente se requiere que los endpoints encargados de consultar el contenido de las tablas implementen sistema de paginación.
 
 ## EndPoints requeridos
-1.  Crear un consulta que permita visualizar los veterinarios cuya especialidad sea Cirujano vascular.
-2.  Listar los medicamentos que pertenezcan a el laboratorio Genfar
-3.  Mostrar las mascotas que se encuentren registradas cuya especie sea felina.
-4.  Listar los propietarios y sus mascotas.
-5.  Listar los medicamentos que tenga un precio de venta mayor a 50000
-6.  Listar las mascotas que fueron atendidas por motivo de vacunacion en el primer trimestre del 2023
-7.  Listar todas las mascotas agrupadas por especie.
-8.  Listar todos los movimientos de medicamentos y el valor total de cada movimiento.
-9.  Listar las mascotas que fueron atendidas por un determinado veterinario.
-10. Listar los proveedores que me venden un determinado medicamento.
-11. Listar las mascotas y sus propietarios cuya raza sea Golden Retriver
-12. Listar la cantidad de mascotas que pertenecen a una raza a una raza. Nota: Se debe mostrar una lista de las razas y la cantidad de mascotas que pertenecen a la raza.
-
-
+1. Listar los proveedores que sean persona natural.
+2. Listar las prendas de una orden de producción cuyo estado sea en producción. El usuario debe ingresar el número de orden de producción.
+3. Listar las prendas agrupadas por el tipo de protección.
+4. Listar las ordenes de producción que pertenecen a un cliente especifico. El usuario debe ingresar el IdCliente y debe obtener la siguiente información:
+   - IdCliente, Nombre, Municipio donde se encuentra ubicado.
+   - Nro de orden de producción, fecha y el estado de la orden de producción (Se debe mostrar la descripción del estado, código del estado, valor total de la orden de producción.
+   - Detalle de orden: Nombre de la prenda, Código de la prenda, Cantidad, Valor total en pesos y en dólares.
+5. Listar los insumos de una prenda y calcular cuanto cuesta producir una prenda especifica. El costo de la prenda dependerá de la cantidad de insumos que sean necesarios para la producción de la misma. El usuario debe ingresar en Id de la prenda.
+6. Listar los insumos que son vendidos por un determinado proveedor. El usuario debe ingresar el Nit de proveedor.
+7. Listar las ventas realizadas por un empleado especifico. El usuario debe ingresar el Id del empleado y mostrar la siguiente información.
+   - Id Empleado
+   - Nombre del empleado
+   - Fecturas : Nro Factura, fecha y total de la factura.
 ### Pre-requisitos 📋
 
 - .NET 7.0
 - MySQL
+### Estrucutra de la base de datos utilizada
+![image](https://github.com/yllensc/yllensantamaria-ropa/assets/117176562/bcf876dd-7e22-45ec-bbd2-eab3b8882070)
+
 
 ### Instalación 🔧
 
@@ -50,9 +47,6 @@ Ejecuta los comandos:
 1. cd API
 2. dotnet run
 ```
-Al terminar, como es un proyecto local de momento, obtienes la información del localhost:
-![image](https://github.com/yllensc/veterinaria-4capas-csharp/assets/117176562/4fcda1fd-d1b6-41f9-9e29-3125dac99651)
-
 ## Ejecutando las pruebas ⚙️
 ### Ojito 👀:
 El proyecto tiene una colección de postman con la petición del token que caduca cada 2 minutos, los 12 endpoints del requerimiento y un CRUD de prueba para Appointment.
