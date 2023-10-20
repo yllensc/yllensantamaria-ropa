@@ -3,18 +3,18 @@ using Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
 
-namespace Application.Repository;
-public class VeterinarianRepository : GenericRepository<Veterinarian>, IVeterinarianRepository
+/*namespace Application.Repository;
+public class EmpleadoRepository : GenericRepository<Empleado>, IEmpleadoRepository
 {
-    private readonly VeterinaryDbContext _context;
+    private readonly ClothingDbContext _context;
 
-    public VeterinarianRepository(VeterinaryDbContext context) : base(context)
+    public EmpleadoRepository(ClothingDbContext context) : base(context)
     {
         _context = context;
     }
-    public override async Task<(int totalRecords, IEnumerable<Veterinarian> records)> GetAllAsync(int pageIndex, int pageSize, string search)
+    public override async Task<(int totalRecords, IEnumerable<Empleado> records)> GetAllAsync(int pageIndex, int pageSize, string search)
     {
-        var query = _context.Veterinarians as IQueryable<Veterinarian>;
+        var query = _context.Empleados as IQueryable<Empleado>;
 
         if (!string.IsNullOrEmpty(search))
         {
@@ -31,16 +31,16 @@ public class VeterinarianRepository : GenericRepository<Veterinarian>, IVeterina
         return (totalRecords, records);
     }
 
-    public async Task<IEnumerable<Veterinarian>> GetCardiovascularSurgeonAsync()
+    public async Task<IEnumerable<Empleado>> GetCardiovascularSurgeonAsync()
     {
-        return await _context.Veterinarians
+        return await _context.Empleados
                             .Where(p => p.Specialty.ToLower() == "cirugía vascular")
                             .ToListAsync();
     }
 
-    public async Task<(int totalRecords, IEnumerable<Veterinarian> records)> GetCardiovascularSurgeonAsync(int pageIndex, int pageSize, string search)
+    public async Task<(int totalRecords, IEnumerable<Empleado> records)> GetCardiovascularSurgeonAsync(int pageIndex, int pageSize, string search)
     {
-        var query = _context.Veterinarians as IQueryable<Veterinarian>;
+        var query = _context.Empleados as IQueryable<Empleado>;
 
         if (!string.IsNullOrEmpty(search))
         {
@@ -58,3 +58,4 @@ public class VeterinarianRepository : GenericRepository<Veterinarian>, IVeterina
         return (totalRecords, records);
     }
 }
+*/

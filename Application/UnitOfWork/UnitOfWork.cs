@@ -10,13 +10,12 @@ namespace Application.UnitOfWork;
 
 public class UnitOfWork : IUnitOfWork, IDisposable
 {
-    private readonly VeterinaryDbContext _context;
+    private readonly ClothingDbContext _context;
     private IRolRepository _roles;
     private IUserRepository _users;
     private IUserRol _userole;
-    private IVeterinarianRepository _veterinarianRepository;
     
-    public UnitOfWork(VeterinaryDbContext context)
+    public UnitOfWork(ClothingDbContext context)
     {
         _context = context;
     }
@@ -52,17 +51,6 @@ public class UnitOfWork : IUnitOfWork, IDisposable
                 _users = new UserRepository(_context);
             }
             return _users;
-        }
-    }
-    public IVeterinarianRepository Veterinarians
-    {
-        get
-        {
-            if (_veterinarianRepository == null)
-            {
-                _veterinarianRepository = new VeterinarianRepository(_context);
-            }
-            return _veterinarianRepository;
         }
     }
 

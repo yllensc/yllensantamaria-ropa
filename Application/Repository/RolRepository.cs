@@ -6,9 +6,9 @@ namespace Application.Repository;
 
 public class RolRepository : GenericRepository<Rol>, IRolRepository
 {
-    private readonly VeterinaryDbContext _context;
+    private readonly ClothingDbContext _context;
 
-    public RolRepository(VeterinaryDbContext context) : base(context)
+    public RolRepository(ClothingDbContext context) : base(context)
     {
        _context = context;
     }

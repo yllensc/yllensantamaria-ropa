@@ -4,9 +4,9 @@ public class Authorization
 {
     public enum Roles
     {
-        Administrator,
-        Veterinarian,
-        WithoutRol
+        Admi,
+        Empleado,
+        SinRolAsignado
     }
-    public const Roles rol_default = Roles.WithoutRol;
+    public const Roles rol_default = Roles.SinRolAsignado;
 }

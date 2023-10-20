@@ -10,7 +10,6 @@ public interface IUnitOfWork
     IRolRepository Roles { get; }
     IUserRepository Users { get; }
     IUserRol UserRoles {get; }
-    IVeterinarianRepository Veterinarians {get; }
     Task<int> SaveAsync();
 
 }

@@ -126,7 +126,7 @@ public class UserService : IUserService
 
                 if (userHasRole == false)
                 {
-                if (rolExists.Name == Authorization.Roles.Veterinarian.ToString())
+                /*if (rolExists.Name == Authorization.Roles.Veterinarian.ToString())
                     {
 
                         if (!string.IsNullOrEmpty(model.Specialty) && !string.IsNullOrEmpty(model.PhoneNumber) && !string.IsNullOrEmpty(model.Name))
@@ -146,11 +146,11 @@ public class UserService : IUserService
                             return $"Register veterinarians needs all data correct (Name, Position)";
                         }
 
-                    }
-                    var withoutRole = user.Roles.FirstOrDefault(u => u.Name == Authorization.Roles.WithoutRol.ToString());
-                    if (withoutRole != null && model.Role.ToLower() != Authorization.Roles.WithoutRol.ToString().ToLower())
+                    }*/
+                    var SinRolAsignadoe = user.Roles.FirstOrDefault(u => u.Name == Authorization.Roles.SinRolAsignado.ToString());
+                    if (SinRolAsignadoe != null && model.Role.ToLower() != Authorization.Roles.SinRolAsignado.ToString().ToLower())
                     {
-                        user.Roles.Remove(withoutRole);
+                        user.Roles.Remove(SinRolAsignadoe);
                     }
                     user.Roles.Add(rolExists);
                     _unitOfWork.Users.Update(user);

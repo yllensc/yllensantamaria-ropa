@@ -12,7 +12,6 @@ namespace Persistence
         public DbSet<User> Users { get; set; }
         public DbSet<Rol> Roles { get; set; }
         public DbSet<UserRol> UserRoles { get; set; }
-        public DbSet<Veterinarian> Veterinarians { get; set; }  
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

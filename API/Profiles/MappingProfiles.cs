@@ -16,7 +16,6 @@ public class MappingProfiles : Profile
     {
         CreateMap<User, UserWithRolDto>().ReverseMap();
         //.ForMember(dest => dest.Movement, opt => opt.MapFrom(src => src.TypeMovement.Name))
-        CreateMap<Veterinarian, VeterinarianDto>().ReverseMap();
     }
 
 }

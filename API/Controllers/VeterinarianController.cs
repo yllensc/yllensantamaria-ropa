@@ -5,7 +5,7 @@ using Domain.Entities;
 using Domain.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-namespace API.Controllers
+/*namespace API.Controllers
 {
     [ApiVersion("1.0")]
     [ApiVersion("1.1")]
@@ -113,3 +113,4 @@ namespace API.Controllers
         }
     }
 }
+*/

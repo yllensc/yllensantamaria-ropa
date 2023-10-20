@@ -11,5 +11,5 @@ public class User : BaseEntity
     public ICollection<Rol> Roles { get; set; } = new HashSet<Rol>();
     public ICollection<RefreshToken> RefreshTokens { get; set; } = new HashSet<RefreshToken>();
     public ICollection<UserRol> UsersRols { get; set; }
-    public ICollection<Veterinarian> Veterinarians {get; set;}
+    public ICollection<Empleado> Empleados {get; set;}
 }

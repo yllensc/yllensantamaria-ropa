@@ -5,9 +5,9 @@ using Persistence;
 namespace Application.Repository;
 public class UserRepository : GenericRepository<User>, IUserRepository
 {
-    private readonly VeterinaryDbContext _context;
+    private readonly ClothingDbContext _context;
 
-    public UserRepository(VeterinaryDbContext context) : base(context)
+    public UserRepository(ClothingDbContext context) : base(context)
     {
         _context = context;
     }
