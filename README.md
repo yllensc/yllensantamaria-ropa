@@ -93,8 +93,8 @@ El ratelimit define la cantidad de peticiones permitidas en el tiempo y sobrepas
 Los endpoints son de tipo GET, por lo que todos cuentan con su versión 1.0 y 1.1, para los ejemplos, las consultas se van a presentar con diferentes versiones:
 1. ``` http://localhost:5223/api/Proveedor/getTipoPersonanatural ``` <br>
 
-2. ```  ``` <br>
-3. ```  ``` <br>
+2. ``` http://localhost:5223/api/Prenda/prendasEnProduccionconNumOrden1 ``` <br>
+3. ``` http://localhost:5223/api/Prenda/prendasConTipoDeProteccion ``` <br>
 4. ```  ``` <br>
 5. ```   ``` <br>
 6. ```  ``` <br>
