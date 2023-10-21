@@ -58,7 +58,7 @@ Endpoint: ```http://localhost:5223/api/User/register```
 Método: ```POST```
 <br>
 Body:
-```{"Email": "v2@gmail.com","UserName": "veterinario2","Password": "1234","IdenNumber": "123423344678"}```
+```{"Email": "v2@gmail.com","UserName": "empleado2","Password": "1234","IdenNumber": "123423344678"}```
 
 #### 2. Token <br>
 Endpoint: ```http://localhost:5223/api/User/token```
@@ -76,13 +76,6 @@ Método: ```POST```
 Body:
 ```{"RefreshToken":"9YIa9WNUKqobsKEr4R9z/dsUFr5Dm0x9fjj0IBXkYMw="}```
 
-#### 4. Add role <br>
-Endpoint: ```http://localhost:5223/api/User/addrole```
-
-Método: ```POST```
-<br>
-Body:
-```{ "UserName": "veterinario2","Role": "Veterinarian","Name": "juana banana","PhoneNumber": "3019284930","Specialty": "aves"}```
 ## Autenticación y autorización
 Para este ejercicio, creé 3 roles, Admi, Empleado, SinRolAasignado. Casi todas las peticiones HTTP autorizan a los usuarios, y hay peticiones en particular con restricciones por role. Por ejemplo, los empleados no tienen acceso a sus propios datos.
 
