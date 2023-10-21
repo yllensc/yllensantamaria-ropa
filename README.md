@@ -50,7 +50,7 @@ Ejecuta los comandos:
 ## Ejecutando las pruebas ⚙️
 ### Ojito 👀:
 El proyecto tiene una colección de postman con la petición del token que caduca cada 2 minutos, los 12 endpoints del requerimiento y un CRUD de prueba para Appointment.
-Aquí ➡️: [CollectionPostman](https://github.com/yllensc/veterinaria-4capas-csharp/blob/main/VeterinarianEndpoints.postman_collection)
+Aquí ➡️: [CollectionPostman]([https://github.com/yllensc/veterinaria-4capas-csharp/blob/main/VeterinarianEndpoints.postman_collection](https://github.com/yllensc/yllensantamaria-ropa/blob/main/CampusFiltroYllenSantamaria.postman_collection.json))
 ### User 👨‍💻💁‍♂️💁‍♀️:
 #### 1. Register <br>
 Endpoint: ```http://localhost:5223/api/User/register```
