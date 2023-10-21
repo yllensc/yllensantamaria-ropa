@@ -50,7 +50,8 @@ public class PrendaRepository : GenericRepository<Prenda>, IPrendaRepository
         .GroupBy(g => g.Descripcion)
         .Select(u => new
         {
-            TipoProteccion = u.Key
+            TipoProteccion = u.Key,
+            Prendas = u.Select(p => new {p.Prendas})
         })
         .ToListAsync();
 
