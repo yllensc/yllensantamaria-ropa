@@ -57,7 +57,7 @@ using (var scope = app.Services.CreateScope())
 	{
 		var context = services.GetRequiredService<ClothingDbContext>();
 		await context.Database.MigrateAsync();
-		//await VeterinaryContextSeed.SeedAsync(context,loggerFactory);
+		await ContextSeed.SeedAsync(context,loggerFactory);
 	}
 	catch (Exception ex)
 	{

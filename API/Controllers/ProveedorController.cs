@@ -102,5 +102,15 @@ namespace API.Controllers
             await _unitOfwork.SaveAsync();
             return NoContent();
         }
+
+        [HttpGet("getTipoPersona{tipopersona}")]
+        [MapToApiVersion("1.0")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<IEnumerable<ProveedorDto>>> GetTypePerson(string tipopersona)
+        {
+            var Proveedor = await _unitOfwork.Proveedores.GetTypePerson(tipopersona);
+            return _mapper.Map<List<ProveedorDto>>(Proveedor);
+        }
     }
 }

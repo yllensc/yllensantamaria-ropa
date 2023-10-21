@@ -75,7 +75,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    ICargoRepository IUnitOfWork.Cargos
+    public ICargoRepository Cargos
     {
         get
         {
@@ -87,7 +87,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    IClienteRepository IUnitOfWork.Clientes
+    public IClienteRepository Clientes
      {
         get
         {
@@ -98,7 +98,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
             return _cliente;
         }
     }
-    IColorRepository IUnitOfWork.Colores  {
+    public IColorRepository Colores  {
         get
         {
             if (_color == null)
@@ -109,7 +109,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    IDepartamentoRepository IUnitOfWork.Departamentos  {
+    public IDepartamentoRepository Departamentos  {
         get
         {
             if (_departamento == null)
@@ -120,7 +120,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    IDetalleOrdenRepository IUnitOfWork.DetalleOrdenes  {
+    public IDetalleOrdenRepository DetalleOrdenes  {
         get
         {
             if (_detalleOrden == null)
@@ -131,7 +131,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    IDetalleVentaRepository IUnitOfWork.DetalleVentas  {
+    public IDetalleVentaRepository DetalleVentas  {
         get
         {
             if (_detalleVenta == null)
@@ -142,7 +142,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    IEmpleadoRepository IUnitOfWork.Empleados  {
+    public IEmpleadoRepository Empleados  {
         get
         {
             if (_empleado == null)
@@ -153,7 +153,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    IEmpresaRepository IUnitOfWork.Empresas  {
+    public IEmpresaRepository Empresas  {
         get
         {
             if (_empresa == null)
@@ -164,7 +164,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    IEstadoRepository IUnitOfWork.Estados  {
+    public IEstadoRepository Estados  {
         get
         {
             if (_estado == null)
@@ -175,7 +175,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    IFormaPagoRepository IUnitOfWork.FormaPagos  {
+    public IFormaPagoRepository FormaPagos  {
         get
         {
             if (_formaPago == null)
@@ -186,7 +186,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    IGeneroRepository IUnitOfWork.Generos  {
+    public IGeneroRepository Generos  {
         get
         {
             if (_genero == null)
@@ -197,7 +197,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    IInsumoRepository IUnitOfWork.Insumos  {
+    public IInsumoRepository Insumos  {
         get
         {
             if (_insumo == null)
@@ -208,7 +208,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    IInsumoPrendaRepository IUnitOfWork.InsumoPrendas  {
+    public IInsumoPrendaRepository InsumoPrendas  {
         get
         {
             if (_insumoPrenda == null)
@@ -219,7 +219,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    IInventarioRepository IUnitOfWork.Inventarios  {
+    public IInventarioRepository Inventarios  {
         get
         {
             if (_inventario == null)
@@ -230,7 +230,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    IInventarioTallaRepository IUnitOfWork.InventarioTallas  {
+    public IInventarioTallaRepository InventarioTallas  {
         get
         {
             if (_inventarioTalla == null)
@@ -241,7 +241,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    IMunicipioRepository IUnitOfWork.Municipios  {
+    public IMunicipioRepository Municipios  {
         get
         {
             if (_municipio == null)
@@ -252,7 +252,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    IOrdenRepository IUnitOfWork.Ordenes  {
+    public IOrdenRepository Ordenes  {
         get
         {
             if (_orden == null)
@@ -263,7 +263,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    IPaisRepository IUnitOfWork.Paises  {
+    public IPaisRepository Paises  {
         get
         {
             if (_pais == null)
@@ -274,7 +274,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    IPrendaRepository IUnitOfWork.Prendas  {
+    public IPrendaRepository Prendas  {
         get
         {
             if (_prenda == null)
@@ -285,7 +285,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    IProveedorRepository IUnitOfWork.Proveedores  {
+    public IProveedorRepository Proveedores  {
         get
         {
             if (_proveedor == null)
@@ -296,7 +296,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    ITallaRepository IUnitOfWork.Tallas  {
+    public ITallaRepository Tallas  {
         get
         {
             if (_talla == null)
@@ -307,7 +307,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    ITipoPersonaRepository IUnitOfWork.TipoPersonas  {
+    public ITipoPersonaRepository TipoPersonas  {
         get
         {
             if (_tipoPersona == null)
@@ -318,7 +318,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    ITipoProteccionRepository IUnitOfWork.TipoProtecciones  {
+    public ITipoProteccionRepository TipoProtecciones  {
         get
         {
             if (_tipoProteccion == null)
@@ -329,7 +329,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    IVentaRepository IUnitOfWork.Ventas  {
+    public IVentaRepository Ventas  {
         get
         {
             if (_venta == null)
@@ -339,6 +339,8 @@ public class UnitOfWork : IUnitOfWork, IDisposable
             return _venta;
         }
     }
+
+
 
     public async Task<int> SaveAsync()
     {
@@ -350,8 +352,4 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         _context.Dispose();
     }
 
-    Task<int> IUnitOfWork.SaveAsync()
-    {
-        throw new NotImplementedException();
-    }
 }

@@ -102,5 +102,25 @@ namespace API.Controllers
             await _unitOfwork.SaveAsync();
             return NoContent();
         }
+
+        [HttpGet("prendasEnProduccionconNumOrden{numOrden}")]
+        [MapToApiVersion("1.0")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult> GetOrderInProduction(int numOrden)
+        {
+            var prendas = await _unitOfwork.Prendas.GetOrderInProduction(numOrden);
+            return Ok(prendas);
+        }
+        [HttpGet("prendasConTipoDeProteccion")]
+        [MapToApiVersion("1.0")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult> GetTypeProtectionGroup()
+        {
+            var prendas = await _unitOfwork.Prendas.GetTypeProtectionGroup();
+            return Ok(prendas);
+        }
+
     }
 }
